@@ -1,7 +1,13 @@
 package com.gaj;
 
 import com.gaj.exception.CustomException;
+import com.gaj.util.R;
 import org.junit.Test;
+import org.springframework.beans.BeanUtils;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @Project: demo
@@ -22,4 +28,5 @@ public class Test01 {
             System.out.println("执行了test01");
         }
     }
+
 }

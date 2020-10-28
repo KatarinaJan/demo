@@ -38,9 +38,9 @@ public class MyCodeGenerator {
         // 3、数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUrl("jdbc:mysql://121.89.207.6/sgti_itochu_wechat?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT");
-        dsc.setUsername("itochu");
-        dsc.setPassword("itoCHU&0807");
+        dsc.setUrl("jdbc:mysql://localhost:3306/public?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT");
+        dsc.setUsername("root");
+        dsc.setPassword("root");
         dsc.setDbType(DbType.MYSQL); // 指定数据库类型
         mpg.setDataSource(dsc);
 
@@ -56,7 +56,7 @@ public class MyCodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("t_company","t_company_dept","t_department","t_dept_tag","t_member","t_member_tag","t_tag");
+        strategy.setInclude("meta_qsdw","syq_dlfx");
         strategy.setNaming(NamingStrategy.underline_to_camel); // 数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); // 生成实体类时去掉表前缀
         strategy.setColumnNaming(NamingStrategy.underline_to_camel); // 数据库表字段映射到实体的命名策略
